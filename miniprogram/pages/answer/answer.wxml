@@ -1,0 +1,9 @@
+<view class="Center">
+  <image 
+    data-openid="{{answer._openid}}" 
+    src="{{answer.avatar}}" 
+    class='avatar'
+  />
+  <text  data-openid="{{answer._openid}}">{{answer.name}}</text>
+</view> 
+<text>{{answer.answer}}</text>

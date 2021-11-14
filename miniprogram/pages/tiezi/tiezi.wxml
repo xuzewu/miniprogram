@@ -1,0 +1,34 @@
+<view  bindtap="to_user_or_reply">
+  <block wx:for="{{list}}">
+    <view class="Center" style="margin-bottom:10px;">
+      <image 
+        data-openid="{{item._openid}}"
+        class="avatar"
+        src="{{item.avatar}}"
+      />
+      <text data-openid="{{item._openid}}" >{{item.name}}</text>
+    </view> 
+    <text  data-reply_id="{{item._id}}" >{{item.reply}}</text> 
+
+    <view style="background:#F2F2F2;margin: 10px 0 10px 0;line-height:30px;">
+      <block wx:if="{{comment[index].length}}" wx:for="{{comment[index]}}" wx:for-item="i" > 
+        <view>
+          <text >{{i.reviewer}}</text><block wx:if="{{i.receiver}}"> 回复 <text>{{i.receiver}}</text></block> : <text 
+            data-reply_id="{{item._id}}" 
+            data-receiver="{{i.reviewer}}"
+          >{{i.comment}}</text>
+        </view>
+      </block>
+    </view>
+  
+  </block>
+</view>
+
+<view class="flex" style=" position: fixed;left: 0; right: 0; bottom: {{bottom}}; padding: 10px;background: white;" >
+  <input class="grow" value="{{value}}" bindfocus='focus' bindinput='input' bindblur="blur" focus='{{focus}}'/>
+  <text  style="color:{{input ? '#00BFFF' : 'gray'}};width: 10vw;" bindtap="comment" >评论</text>
+</view>
+
+
+
+

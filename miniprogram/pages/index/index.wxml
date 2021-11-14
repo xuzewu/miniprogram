@@ -1,0 +1,23 @@
+<input placeholder="搜索"  bindtap="search" class="container" />
+<view class="col" bindtap="to_user_or_tiezi">
+  <block wx:for="{{list}}">
+    <view class="container" data-index="{{index}}" data-id="{{item._id}}">
+      <view class="between" data-id="{{item._id}}">
+        <view data-index="{{index}}" data-id="{{item._id}}"  class="Center" style="margin-bottom:10px;">
+          <image 
+            data-openid="{{item._openid}}"
+            class="avatar"
+            src="{{item.avatar}}"
+          />
+          <text data-openid="{{item._openid}}">{{item.name}}</text>
+        </view> 
+        <t  style="color:{{collect[index] ? 'gray' : '#00BFFF'}};"  data-index="{{index}}"data-tiezi_id="{{item._id}}">
+          {{collect[index] ? '已' : ''}}收藏
+        </t>
+      </view>
+      <text data-index="{{index}}" data-id="{{item._id}}">{{item.tiezi}}</text>
+    </view>
+  </block>
+</view>
+
+

@@ -1,0 +1,13 @@
+<text 
+  bindtap="publish" 
+  class="center"
+  style="color:{{input ? '#00BFFF' : 'gray'}};font-size:x-large;" 
+>发帖
+</text>
+<textarea  
+  style="margin-top: 10px;"
+  focus='{{true}}'
+  show-confirm-bar = "{{false}}" 
+  bindinput='input'
+  value="{{value}}"
+/>

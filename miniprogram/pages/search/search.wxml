@@ -1,0 +1,20 @@
+<input  class="container"  focus="{{true}}"  bindconfirm="search" />
+<view class="col" bindtap="to_tiezi">
+  <block wx:for="{{list}}">
+    <view class="container" data-id="{{item._id}}">
+      <view data-id="{{item._id}}"  class="Center" style="margin-bottom:10px;">
+        <image 
+          data-openid="{{item._openid}}"
+          class="avatar"
+          src="{{item.avatar}}"
+        />
+        <text data-openid="{{item._openid}}">{{item.name}}</text>
+      </view> 
+      <text data-id="{{item._id}}">{{item.tiezi}}</text>
+    </view>
+  </block>
+</view>
+
+
+
+

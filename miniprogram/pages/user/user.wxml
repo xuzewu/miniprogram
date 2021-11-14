@@ -1,0 +1,11 @@
+<view class='center'>
+  <image class="avatar" src='{{user.avatar}}' />
+  <text>{{user.name}}</text>
+</view>
+<view  class="col" bindtap="to_tiezi">
+  <block wx:for="{{list}}">
+    <view class="container" data-id="{{item._id}}">
+      <text >{{item.tiezi}}</text>
+    </view>
+  </block>
+</view>

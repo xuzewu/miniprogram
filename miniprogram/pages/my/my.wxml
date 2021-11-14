@@ -1,0 +1,28 @@
+<view  wx:if="{{name}}" class='center'>
+  <view class="avatar">
+    <open-data  type="userAvatarUrl" ></open-data>
+  </view>
+  <open-data  type="userNickName" ></open-data>
+</view>
+<button wx:else open-type='getUserInfo' bindtap='getUserInfo'>微信登录</button>
+<view class="around" bindtap="toggle" style="margin:20px 0 20px 0;">
+  <text data-index="0" style="color:{{index==0 ? '' : 'gray'}} ;">帖子</text>
+  <text data-index="1" style="color:{{index==1 ? '' : 'gray'}} ;">收藏</text>
+  <text data-index="2" style="color:{{index==2 ? '' : 'gray'}};" >浏览历史</text>
+</view>
+<view class="col" bindtap="to_user_or_tiezi">
+  <block wx:if="{{list}}" wx:for="{{list}}" wx:for-index="i">
+    <view class="container" data-id="{{item._id}}">
+      <view wx:if="{{index!='0'}}"  data-id="{{item._id}}"  class="Center" style="margin-bottom:10px;">
+        <image 
+          data-openid="{{item._openid}}"
+          class="avatar"
+          src="{{item.avatar}}"
+        />
+        <text data-openid="{{item._openid}}">{{item.name}}</text>
+      </view>   
+      <text data-index="{{index}}" data-id="{{item._id}}">{{item.tiezi}}</text>
+    </view>
+  </block>
+</view>
+

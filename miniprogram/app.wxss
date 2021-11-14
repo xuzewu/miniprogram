@@ -1,0 +1,62 @@
+page{
+  background:#F2F2F2;
+}
+.container{
+  background:white;
+  padding:10px;
+  margin:10px 10px 0 10px;
+  border-radius: 10px;
+}
+.avatar{
+  width: 5vh; 
+  height: 5vh; 
+  border-radius: 50%;
+}
+.search{
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.flex{
+  display: flex;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
+.Center{
+  display: flex;
+  align-items: center;
+}
+.between{
+  display: flex;
+  justify-content: space-between;
+}
+.grow{
+  flex-grow: 1;
+}
+.scroll{
+  overflow: scroll;
+}
+.shrink{
+  flex-shrink: 0;
+}
+.hidden{
+  overflow: hidden;
+}
+.Start{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.end{
+  display: flex;
+  justify-content: flex-end;
+}
+.around{
+  display: flex;
+  justify-content: space-around;
+}

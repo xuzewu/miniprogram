@@ -1,0 +1,4 @@
+/* pages/answer/answer.wxss */
+page{
+  background: white;
+}
